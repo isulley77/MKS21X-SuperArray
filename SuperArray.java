@@ -64,13 +64,17 @@ class SuperArray{
     }
     
     
-/*    
-    public String get(index){ 
+    
+    public String get(int index){ 
    
-            return 
+        if(index < 0 || index > size()){
+            throw new IndexOutOfBoundsException();
+        }
+        
+        return SA[index]; 
     }
     
-    
+/*    
     public String set(index, str){
         
     }
