@@ -97,11 +97,20 @@ class SuperArray{
         return str;
     }
     
-/*    
-    public boolean contains(str){
+   
+    public boolean contains(String str){
+        
+        for(int i = 0; i < size; i++){
+            if(SA[i].equals(str)){
+                return true;
+            }
+        }
+        
+        return false;
         
     }
-    
+
+/*
     public void add(index, str){
         
     }
