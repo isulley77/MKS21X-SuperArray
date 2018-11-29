@@ -83,12 +83,21 @@ class SuperArray{
         SA[index] = str;
     }
     
-/*    
+   
     public String toString(){
 
+        String str = "";
+        str += "{";
+        
+        for(int i = 0; i < size(); i++){
+            str += SA[i] + ", ";
+        }
+        
+        str += "}";
+        return str;
     }
     
-    
+/*    
     public boolean contains(str){
         
     }
