@@ -74,12 +74,16 @@ class SuperArray{
         return SA[index]; 
     }
     
-/*    
-    public String set(index, str){
+   
+    public void set(int index, String str){
+       if(index < 0 || index > size()){
+            throw new IndexOutOfBoundsException();
+        }
         
+        SA[index] = str;
     }
     
-    
+/*    
     public String toString(){
 
     }
