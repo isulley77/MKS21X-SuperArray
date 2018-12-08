@@ -114,15 +114,15 @@ class SuperArray{
         if(index < 0 || index > size()){
             throw new IndexOutOfBoundsException();
         }
-        if(data.length == size()){
+        if(SA.length == size()){
             resize();
         }
         for(int i = size(); i > -1; i--){
             if(i == index){
-                data[i] = str;
+                SA[i] = str;
             }
             if(index < i){
-                data[i] = data[i-1];
+                SA[i] = SA[i-1];
             }
         }
         size++;
@@ -130,22 +130,22 @@ class SuperArray{
     
     public void resize(){
     
-        String[] newAry = new String[data.length * 2 + 1];
+        String[] newAry = new String[SA.length * 2 + 1];
         
-        for(int i = 0; i < data.length; i++){
+        for(int i = 0; i < SA.length; i++){
         
-            newAry[i] = data[i];
+            newAry[i] = SA[i];
         }
         
-        data = newAry;
+        SA = newAry;
     }
         
         
-    }
+
   public int indexOf(String str){
   
     for(int i = 0; i < size(); i++){
-        if(data[i].equals(str)){
+        if(SA[i].equals(str)){
             return i;
         }
     }
@@ -158,20 +158,29 @@ class SuperArray{
     public int lastIndexOf(String str){
             
         for(int i = size() - 1; i > -1; i--){
-            if(data[i].equals(str)){
+            if(SA[i].equals(str)){
                 return i;
             }
         }
         return -1;
     }
  
- }
- /*    
-  
-    public String remove(index){
-        
-    }
+ 
     
+  
+    public void remove(int index){
+    
+        if(index < 0 || index > size()){
+            throw new IndexOutOfBoundsException();
+        }
+        for(int i = index; i < size(); i++){
+            SA[i] = SA[i + 1];
+        }
+        size--;
+    }
+        
+
+ /*   
     public boolean remove(str){
         
     }
@@ -179,3 +188,4 @@ class SuperArray{
 */    
     
 }
+
