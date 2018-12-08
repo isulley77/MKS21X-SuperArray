@@ -97,7 +97,6 @@ class SuperArray{
         return str;
     }
     
-   
     public boolean contains(String str){
         
         for(int i = 0; i < size; i++){
@@ -110,11 +109,28 @@ class SuperArray{
         
     }
 
-/*
-    public void add(index, str){
+
+    public void add(int index, String str){
+        if(index < 0 || index > size()){
+            throw new IndexOutOfBoundsException();
+        }
+        if(data.length == size()){
+            resize();
+        }
+        for(int i = size(); i > -1; i--){
+            if(i == index){
+                data[i] = str;
+            }
+            if(index < i){
+                data[i] = data[i-1];
+            }
+        }
+        size++;
+    }
+        
         
     }
-    
+/*    
     public int indexOf(str){
         
     }
