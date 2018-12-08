@@ -152,13 +152,22 @@ class SuperArray{
     return -1;
   }
         
-}
-   /*    
+
+       
    
-    public int lastIndexOf(str){
-        
+    public int lastIndexOf(String str){
+            
+        for(int i = size() - 1; i > -1; i--){
+            if(data[i].equals(str)){
+                return i;
+            }
+        }
+        return -1;
     }
-    
+ 
+ }
+ /*    
+  
     public String remove(index){
         
     }
