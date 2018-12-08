@@ -127,6 +127,18 @@ class SuperArray{
         }
         size++;
     }
+    
+    public void resize(){
+    
+        String[] newAry = new String[data.length * 2 + 1];
+        
+        for(int i = 0; i < data.length; i++){
+        
+            newAry[i] = data[i];
+        }
+        
+        data = newAry;
+    }
         
         
     }
