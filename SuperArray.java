@@ -142,11 +142,19 @@ class SuperArray{
         
         
     }
-/*    
-    public int indexOf(str){
-        
+  public int indexOf(String str){
+  
+    for(int i = 0; i < size(); i++){
+        if(data[i].equals(str)){
+            return i;
+        }
     }
-    
+    return -1;
+  }
+        
+}
+   /*    
+   
     public int lastIndexOf(str){
         
     }
