@@ -180,12 +180,15 @@ class SuperArray{
     }
         
 
- /*   
-    public boolean remove(str){
-        
+    public boolean remove(String str){
+        for(int i = 0; i < size(); i++){
+            if(SA[i].equals(str)){
+                SA[i] = SA[i+1];
+                size--;
+            }
+        }
+        return contains(str);
     }
-
-*/    
-    
+        
 }
 
